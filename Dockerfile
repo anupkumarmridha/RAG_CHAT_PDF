@@ -31,7 +31,7 @@ RUN adduser \
     appuser
 
 # Change the ownership of the /app directory to appuser    
-RUN chown appuser:appuser /app            
+RUN chown -R appuser:appuser faiss_index           
 
 # Download dependencies as a separate step to take advantage of Docker's caching.
 # Leverage a cache mount to /root/.cache/pip to speed up subsequent builds.
